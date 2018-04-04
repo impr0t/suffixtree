@@ -32,17 +32,20 @@ int main(int argc, char *argv[])
     
     Helpers::Log("Creating suffix array for: " + toProc + ".");
     SuffixArray *sa = new SuffixArray(toProc);
-    std::vector<int> result = sa->build();
+    std::vector<Suffix*> result = sa->build();
+    Helpers::LogSuffixVec(result);
     
     Helpers::Log("Creating LCP array for: " + toProc + ".");
     Lcp *lcp = new Lcp();
-    std::vector<int> lcpresult = lcp->build(toProc, result);
+    std::vector<Prefix*> lcpresult = lcp->build(result);
+    Helpers::LogPrefixVec(lcpresult);
     
     Helpers::Log("Creating suffix tree for: " + toProc + ".");
     SuffixTree *tree = new SuffixTree();
-    tree->process(toProc, result, lcpresult);
+    SuffixTreeNode *root = tree->process(toProc, result, lcpresult);
+    Helpers::LogSuffixTree(root);
     
-    delete sa;
-    delete lcp;
-    delete tree;
+//    delete sa;
+//    delete lcp;
+//    delete tree;
 }

@@ -13,6 +13,7 @@
 		A2AA632320733E86005676C6 /* suffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631C20733E86005676C6 /* suffixtree.cpp */; };
 		A2AA632420733E86005676C6 /* lcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631E20733E86005676C6 /* lcp.cpp */; };
 		A2AA6328207341B1005676C6 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA6326207341B1005676C6 /* helpers.cpp */; };
+		A2AA632B2074532F005676C6 /* prefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA63292074532F005676C6 /* prefix.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		A2AA631E20733E86005676C6 /* lcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lcp.cpp; sourceTree = "<group>"; };
 		A2AA6326207341B1005676C6 /* helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
 		A2AA6327207341B1005676C6 /* helpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = helpers.hpp; sourceTree = "<group>"; };
+		A2AA63292074532F005676C6 /* prefix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prefix.cpp; sourceTree = "<group>"; };
+		A2AA632A2074532F005676C6 /* prefix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prefix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				A2AA631620733E85005676C6 /* suffixtreenode.hpp */,
 				A2AA6326207341B1005676C6 /* helpers.cpp */,
 				A2AA6327207341B1005676C6 /* helpers.hpp */,
+				A2AA63292074532F005676C6 /* prefix.cpp */,
+				A2AA632A2074532F005676C6 /* prefix.hpp */,
 			);
 			path = suffixtree;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AA632120733E86005676C6 /* application.cpp in Sources */,
+				A2AA632B2074532F005676C6 /* prefix.cpp in Sources */,
 				A2AA6328207341B1005676C6 /* helpers.cpp in Sources */,
 				A2AA631F20733E86005676C6 /* suffix.cpp in Sources */,
 				A2AA632220733E86005676C6 /* suffixarray.cpp in Sources */,

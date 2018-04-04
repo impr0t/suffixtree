@@ -17,13 +17,12 @@ class SuffixArray
 private:
     std::string text;
     long textLength;
-    std::vector<int> last;
-    std::vector<Suffix> suffixes;
+    std::vector<Suffix*> last;
     
 public:
     SuffixArray(std::string text);
     ~SuffixArray();
-    std::vector<int> build();
+    std::vector<Suffix*> build();
 };
 
 #endif /* suffixarray_hpp */

@@ -9,7 +9,7 @@ Suffix::~Suffix(){};
 /**
  * Suffix Index Property Setter
  * */
-void Suffix::setIndex(int ind)
+void Suffix::setIndex(long ind)
 {
     this->index = ind;
 }
@@ -26,7 +26,7 @@ void Suffix::setSuffixText(std::string suffix)
  * Suffix Index Property Accessor.
  * Returns: index from the suffix object.
  * */
-int Suffix::getIndex()
+long Suffix::getIndex()
 {
     return this->index;
 }
@@ -44,7 +44,7 @@ std::string Suffix::getSuffixText()
  * Static suffix comparison function.
  * Returns: if s1 is smaller than s2 via string comparison 1; otherwise 0.
  * */
-int Suffix::compare(const Suffix &s1, const Suffix &s2)
+int Suffix::compare(const Suffix *s1, const Suffix *s2)
 {
-    return s1.text.compare(s2.text) < 0 ? 1 : 0;
+    return s1->text.compare(s2->text) < 0 ? 1 : 0;
 }

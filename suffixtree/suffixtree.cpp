@@ -7,68 +7,85 @@
 //
 
 #include <iostream>
+
 #include "suffixtreenode.hpp"
 #include "suffixtree.hpp"
 #include "suffix.hpp"
-
-
-/**
- This function creates a new leaf node for the suffix tree.
-
- @param node parent node.
- @param text the text to use.
- @param suffix the suffix being used.
- @return a new leaf node.
- */
-SuffixTreeNode *SuffixTree::createNewLeaf(SuffixTreeNode *node, std::string text, int suffix)
-{
-    return NULL;
-}
-
-
-/**
- This function forks an edge.
-
- @param node parent node
- @param text text being processed
- @param start starting character
- @param offset offset to be used for the midchar.
- @return a new node with attached children.
- */
-SuffixTreeNode *SuffixTree::breakEdge(SuffixTreeNode *node, std::string text, int start, int offset)
-{
-    return NULL;
-}
+#include "prefix.hpp"
 
 /**
  This function creates a suffix tree from a suffix array and an lcp array.
-
+ 
  @param text The test to process.
  @param suffixarray the suffix array generated from the text.
  @param lcparray the lcp array generated from the text.
+ @return the root suffix tree node to be reported.
  */
-void SuffixTree::process(std::string text, std::vector<int> suffixarray, std::vector<int> lcparray)
+SuffixTreeNode* SuffixTree::process(std::string text, std::vector<Suffix*> suffixarray, std::vector<Prefix*> lcparray)
 {
-    // create a new root node with no parent, depth 0, edge start -1, edge end -1
-    SuffixTreeNode *root = new SuffixTreeNode(NULL, 0, -1, -1);
+    SuffixTreeNode *root = new SuffixTreeNode(NULL, "", 0, -1, -1);
     
-    int lcpPrev = 0;
-    SuffixTreeNode *curNode = root;
-    for (int i = 0; i < text.length(); i++) {
-        int suffix = suffixarray[i];
-        while (curNode->stringDepth > lcpPrev) {
-            curNode = curNode->parent;
+    long lcpPrev = 0;
+    SuffixTreeNode *cur = root;
+    
+    for (int i = 0; i < suffixarray.size(); i++)
+    {
+        Suffix *s = suffixarray[i];
+        
+        while (cur->stringDepth > lcpPrev)
+        {
+            cur = cur->parent;
         }
-        if (curNode->stringDepth == lcpPrev) {
-            curNode = createNewLeaf(curNode, text, suffix);
-        } else {
-            int edgeStart = suffixarray[i - 1] + curNode->stringDepth;
-            int offset = lcpPrev - curNode->stringDepth;
-            SuffixTreeNode *midNode = breakEdge(curNode, text, edgeStart, offset);
-            curNode = createNewLeaf(midNode, text, suffix);
+        
+        if (cur->stringDepth == lcpPrev)
+        {
+            cur = createNewLeaf(cur, text, s);
         }
-        if (i < text.length() - 1) {
-            lcpPrev = lcparray[i];
+        else
+        {
+            long edgeStart = suffixarray[i-1]->getIndex() - cur->stringDepth;
+            long offset = lcpPrev - cur->stringDepth;
+            SuffixTreeNode *midNode = forkEdge(cur, text, edgeStart, offset);
+            cur = createNewLeaf(midNode, text, s);
+        }
+        
+        if (i < lcparray.size())
+        {
+            lcpPrev = lcparray[i]->getLength();
         }
     }
+    
+    return root;
 }
+
+SuffixTreeNode *SuffixTree::createNewLeaf(SuffixTreeNode *cur, std::string text, Suffix *suffix)
+{
+    SuffixTreeNode *leaf = new SuffixTreeNode(cur,
+                                              suffix->getSuffixText(),
+                                              text.length() - suffix->getIndex(),
+                                              suffix->getIndex() + cur->stringDepth,
+                                              text.length() - 1);
+    
+    cur->children[text[leaf->edgeStart]] = leaf;
+    return leaf;
+}
+
+SuffixTreeNode *SuffixTree::forkEdge(SuffixTreeNode *cur, std::string text, long edgeStart, long offset)
+{
+    char startChar = text[edgeStart];
+    char midChar = text[edgeStart + offset];
+    
+    SuffixTreeNode *midNode = new SuffixTreeNode(cur,
+                                                 "",
+                                                 cur->stringDepth + offset,
+                                                 edgeStart,
+                                                 edgeStart + offset - 1);
+    
+    midNode->children[midChar] = cur->children[startChar];
+    cur->children[startChar]->parent = midNode;
+    cur->children[startChar]->edgeStart += offset;
+    cur->children[startChar] = midNode;
+    return midNode;
+}
+
+

@@ -12,12 +12,15 @@
 #include <string>
 #include <vector>
 
+#include "suffix.hpp"
+#include "prefix.hpp"
+
 class Lcp
 {
 private:
-    std::vector<int> last;
+    std::vector<Prefix*> last;
 public:
-    std::vector<int> build(std::string text, std::vector<int> suffixArray);
+    std::vector<Prefix*> build(std::vector<Suffix*> suffixArray);
 };
 
 #endif /* lcp_hpp */

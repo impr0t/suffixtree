@@ -14,17 +14,17 @@
 class Suffix
 {
 private:
-    int index;
+    long index;
     std::string text;
     
 public:
     Suffix();
     ~Suffix();
-    void setIndex(int ind);
+    void setIndex(long ind);
     void setSuffixText(std::string text);
-    int getIndex();
+    long getIndex();
     std::string getSuffixText();
-    static int compare(const Suffix &s1, const Suffix &s2);
+    static int compare(const Suffix *s1, const Suffix *s2);
 };
 
 #endif /* suffix_hpp */

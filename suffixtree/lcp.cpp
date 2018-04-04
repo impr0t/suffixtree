@@ -1,45 +1,42 @@
 #include "lcp.hpp"
 
-std::vector<int> Lcp::build(std::string text, std::vector<int> suffixArray)
+std::vector<Prefix*> Lcp::build(std::vector<Suffix*> suffixArray)
 {
-    long n = suffixArray.size();
-    std::vector<int> lcp(n, 0);
-    std::vector<int> inverseSuffixArray(n, 0);
+    // the lcp array technically counts the spaces between so it
+    // can be one shorter than the suffix array.
+    std::vector<Prefix*> longestCommonPrefixArray(suffixArray.size() - 1, 0);
     
-    // creating an inverse suffix array which contains
-    // flipped values of our suffix array based on n.
-    // if n = 5, n` = 0.
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < suffixArray.size() - 1; i++)
     {
-        inverseSuffixArray[suffixArray[i]] = i;
-    }
-    
-    int k = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (inverseSuffixArray[i] == n - 1)
+        Suffix *t = suffixArray[i];
+        Suffix *ti = suffixArray[i + 1];
+        
+        std::string tmpSuffixText1 = t->getSuffixText();
+        std::string tmpSuffixText2 = ti->getSuffixText();
+        
+        long characterCount = 0;
+        
+        for (int c = 0; c < tmpSuffixText1.length(); c++)
         {
-            k = 0;
-            continue;
-        }
-        
-        int j = suffixArray[inverseSuffixArray[i] + 1];
-        
-        // identifying the longest common prefix.
-        while (i + k < n && j + k < n && text[i + k] == text[j + k])
-        {
-            k++;
-        }
-        
-        // set the longest common prefix.
-        lcp[inverseSuffixArray[i]] = k;
-        
-        if (k > 0)
-        {
-            k--;
+            char c1 = tmpSuffixText1[c];
+            char c2 = tmpSuffixText2[c];
+            
+            if (c1 == c2)
+            {
+                characterCount++;
+            }
+            else
+            {
+                Prefix *p = new Prefix();
+                p->setLength(characterCount);
+                p->setPrefixText(t->getSuffixText().substr(0, characterCount));
+                longestCommonPrefixArray[i] = p;
+                characterCount = 0;
+                break;
+            }
         }
     }
-    
-    last = lcp;
+
+    last = longestCommonPrefixArray;
     return last;
 }

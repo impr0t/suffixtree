@@ -12,14 +12,17 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+
 #include "suffixtreenode.hpp"
+#include "suffix.hpp"
+#include "prefix.hpp"
 
 class SuffixTree
 {
 public:
-    void process(std::string text, std::vector<int> suffixarray, std::vector<int> lcparray);
-    SuffixTreeNode *createNewLeaf(SuffixTreeNode *node, std::string text, int suffix);
-    SuffixTreeNode *breakEdge(SuffixTreeNode *node, std::string text, int start, int offset);
+    SuffixTreeNode *process(std::string text, std::vector<Suffix*> suffixarray, std::vector<Prefix*> lcparray);
+    SuffixTreeNode *createNewLeaf(SuffixTreeNode *cur, std::string text, Suffix* suffix);
+    SuffixTreeNode *forkEdge(SuffixTreeNode *cur, std::string text, long edgeStart, long offset);
 };
 
 #endif /* suffixtree_hpp */

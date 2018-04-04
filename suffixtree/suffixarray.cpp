@@ -1,7 +1,16 @@
+//
+//  suffixarray.cpp
+//  suffixarray
+//
+//  Created by Brad Lindsay on 2018-03-20.
+//  Copyright © 2018 Brad Lindsay. All rights reserved.
+//
+
 #include <iostream>
 #include <algorithm>
 #include <string>
 #include <vector>
+
 #include "helpers.hpp"
 #include "suffixarray.hpp"
 #include "suffix.hpp"
@@ -26,29 +35,21 @@ SuffixArray::~SuffixArray()
  * Build function for the suffix array, takes text and produces
  * a suffix array from that text.
  * */
-std::vector<int> SuffixArray::build()
+std::vector<Suffix*> SuffixArray::build()
 {
+    last.clear();
+    
     /* we're iterating through our given text, and generating
      * all given suffixes */
     for (int i = 0; i < textLength; i++)
     {
-        Suffix s;
-        s.setIndex(i);
-        s.setSuffixText(text.substr(i, text.length() - i));
-        suffixes.push_back(s);
+        Suffix *s = new Suffix();
+        s->setIndex(i);
+        s->setSuffixText(text.substr(i, text.length() - i));
+        last.push_back(s);
     }
-    
     /* sort the entire suffixes vector */
-    std::sort(suffixes.begin(), suffixes.end(), Suffix::compare);
+    std::sort(last.begin(), last.end(), Suffix::compare);
     
-    /* store and report */
-    last.clear();
-    for (int i = 0; i < textLength; i++)
-    {
-        last.push_back(suffixes[i].getIndex());
-    }
-    
-    // some cleanup.
-    suffixes.clear();
     return last;
 }
