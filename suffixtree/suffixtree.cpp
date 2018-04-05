@@ -32,6 +32,7 @@ SuffixTreeNode* SuffixTree::process(std::string text, std::vector<Suffix*> suffi
     {
         Suffix *s = suffixarray[i];
         
+        // traverse back up the tree.
         while (cur->stringDepth > lcpPrev)
         {
             cur = cur->parent;
@@ -110,5 +111,3 @@ SuffixTreeNode *SuffixTree::forkEdge(SuffixTreeNode *cur, std::string text, long
     cur->children[startChar] = midNode;
     return midNode;
 }
-
-

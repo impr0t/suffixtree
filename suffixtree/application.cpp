@@ -14,6 +14,7 @@
 #include "helpers.hpp"
 #include "suffixtree.hpp"
 #include "suffixarray.hpp"
+#include "suffixarrayparallel.hpp"
 #include "lcp.hpp"
 
 int main(int argc, char *argv[])
@@ -31,21 +32,26 @@ int main(int argc, char *argv[])
     toProc = toProc + "$";
     
     Helpers::Log("Creating suffix array for: " + toProc + ".");
-    SuffixArray *sa = new SuffixArray(toProc);
+    SuffixArrayParallel *sa = new SuffixArrayParallel(toProc);
     std::vector<Suffix*> result = sa->build();
     Helpers::LogSuffixVec(result);
     
+//    Helpers::Log("Creating suffix array for: " + toProc + ".");
+//    SuffixArray *sa = new SuffixArray(toProc);
+//    std::vector<Suffix*> result = sa->build();
+//    Helpers::LogSuffixVec(result);
+
     Helpers::Log("Creating LCP array for: " + toProc + ".");
     Lcp *lcp = new Lcp();
     std::vector<Prefix*> lcpresult = lcp->build(result);
     Helpers::LogPrefixVec(lcpresult);
-    
+
     Helpers::Log("Creating suffix tree for: " + toProc + ".");
     SuffixTree *tree = new SuffixTree();
     SuffixTreeNode *root = tree->process(toProc, result, lcpresult);
     Helpers::LogSuffixTree(root);
     
-//    delete sa;
-//    delete lcp;
-//    delete tree;
+    delete sa;
+    delete lcp;
+    delete tree;
 }
