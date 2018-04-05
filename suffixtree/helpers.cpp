@@ -100,11 +100,44 @@ void Helpers::LogPrefix(Prefix *prefix)
     << std::endl;
 }
 
-void Helpers::LogSuffixTree(SuffixTreeNode *node, long depth)
+/**
+ Starts the logging operation for the suffix tree.
+
+ @param node The root node to kick off the process.
+ */
+void Helpers::LogSuffixTree(SuffixTreeNode *node)
 {
-    for (auto it = node->children.begin(); it != node->children.end(); ++it)
-    {
-        //TODO REPORT.
-    }
+    Helpers::LogSuffixTreeNode(node, 0);
 }
 
+/**
+ Logs a suffix tree node.
+
+ @param node The node to log.
+ @param depth The depth at which to log it.
+ */
+void Helpers::LogSuffixTreeNode(SuffixTreeNode *node, long depth)
+{
+    std::cout << "["
+                << node->edgeText
+                << " : "
+                << node->index
+                << "]" << std::endl;
+    Helpers::LogSuffixTreeNodeChildren(node->children, depth);
+}
+
+/**
+ Logs the children of a suffix tree node
+
+ @param children The children of the node.
+ @param depth The depth at which to log them.
+ */
+void Helpers::LogSuffixTreeNodeChildren(std::map<char, SuffixTreeNode *> children, long depth)
+{
+    for (auto elem : children)
+    {
+        for (int i = 0; i < depth; i++) { std::cout << "--"; }
+        std::cout << elem.first;
+        Helpers::LogSuffixTreeNode(elem.second, depth + 1);
+    }
+}

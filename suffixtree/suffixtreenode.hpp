@@ -15,13 +15,14 @@ class SuffixTreeNode
 {
 public:
     SuffixTreeNode(SuffixTreeNode *parent, std::string edgeText,
-                   long stringDepth, long edgeStart, long edgeEnd)
+                   long stringDepth, long edgeStart, long edgeEnd, long index)
     {
         this->parent = parent;
         this->stringDepth = stringDepth;
         this->edgeText = edgeText;
         this->edgeStart = edgeStart;
         this->edgeEnd = edgeEnd;
+        this->index = index;
     }
     
     ~SuffixTreeNode() { }
@@ -31,6 +32,7 @@ public:
     long stringDepth;
     long edgeStart;
     long edgeEnd;
+    long index;
 };
 
 #endif /*suffixtreenode_hpp*/

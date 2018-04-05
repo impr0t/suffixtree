@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <map>
 
 #include "suffix.hpp"
 #include "prefix.hpp"
@@ -25,7 +26,9 @@ public:
     static void LogSuffix(Suffix *suffix);
     static void LogPrefixVec(std::vector<Prefix*> prefix);
     static void LogPrefix(Prefix *prefix);
-    static void LogSuffixTree(SuffixTreeNode *node, long depth=0);
+    static void LogSuffixTree(SuffixTreeNode *node);
+    static void LogSuffixTreeNode(SuffixTreeNode *node, long depth=0);
+    static void LogSuffixTreeNodeChildren(std::map<char, SuffixTreeNode*> children, long depth=0);
 };
 
 #endif /* helpers_hpp */
