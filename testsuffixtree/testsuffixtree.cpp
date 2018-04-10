@@ -6,4 +6,13 @@
 //  Copyright © 2018 Brad Lindsay. All rights reserved.
 //
 
-#include "testsuffixtree.hpp"
+#include "include/catch.hpp"
+#include "../suffixtree/suffixtree.hpp"
+
+SCENARIO("A suffix tree needs to be dynamically allocated.") {
+    
+    GIVEN("A new suffix tree.") {
+        SuffixTree *s = new SuffixTree();
+        REQUIRE(s != NULL);
+    }
+}

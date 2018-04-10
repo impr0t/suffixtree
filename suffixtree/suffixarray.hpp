@@ -9,20 +9,24 @@
 #ifndef suffixarray_hpp
 #define suffixarray_hpp
 
+#include <string>
 #include <vector>
+#include <mutex>
+
 #include "suffix.hpp"
 
 class SuffixArray
 {
 private:
+    long textlength;
     std::string text;
-    long textLength;
+    std::mutex thread_mutex;
     std::vector<Suffix*> last;
-    
+    void buildSection(long &start, long &end, std::vector<Suffix*> &res);
 public:
-    SuffixArray(std::string text);
-    ~SuffixArray();
-    std::vector<Suffix*> build();
+    std::vector<Suffix*> build(std::string text);
+    std::vector<Suffix*> buildParallel(std::string text);
+    std::vector<Suffix*> getLast();
 };
 
 #endif /* suffixarray_hpp */

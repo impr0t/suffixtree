@@ -11,11 +11,7 @@
 #include <stdio.h>
 #include <vector>
 
-#include "helpers.hpp"
-#include "suffixtree.hpp"
-#include "suffixarray.hpp"
-#include "suffixarrayparallel.hpp"
-#include "lcp.hpp"
+#include "textstat.hpp"
 
 int main(int argc, char *argv[])
 {
@@ -25,33 +21,37 @@ int main(int argc, char *argv[])
         return 1;
     }
     
-    // capture string to process.
     std::string toProc(argv[1]);
-    Helpers::Log("Received " + toProc + " for processing.");
-    Helpers::Log("Appending $ to " + toProc + ".");
-    toProc = toProc + "$";
+    TextStat *t = new TextStat(toProc);
+    t->getLongestSubstring();
+    t->findSubString("brad");
+    t->viewSuffixArray();
+    t->viewLcpArray();
+    t->viewSuffixTree();
     
-    Helpers::Log("Creating suffix array for: " + toProc + ".");
-    SuffixArrayParallel *sa = new SuffixArrayParallel(toProc);
-    std::vector<Suffix*> result = sa->build();
-    Helpers::LogSuffixVec(result);
-    
+//    // capture string to process.
+//    std::string toProc(argv[1]);
+//    Helpers::Log("Received " + toProc + " for processing.");
+//    Helpers::Log("Appending $ to " + toProc + ".");
+//    toProc = toProc + "$";
+//
 //    Helpers::Log("Creating suffix array for: " + toProc + ".");
-//    SuffixArray *sa = new SuffixArray(toProc);
-//    std::vector<Suffix*> result = sa->build();
+//    SuffixArray *sa = new SuffixArray();
+//    //std::vector<Suffix*> result = sa->buildParallel(toProc);
+//    std::vector<Suffix*> result = sa->build(toProc);
 //    Helpers::LogSuffixVec(result);
-
-    Helpers::Log("Creating LCP array for: " + toProc + ".");
-    Lcp *lcp = new Lcp();
-    std::vector<Prefix*> lcpresult = lcp->build(result);
-    Helpers::LogPrefixVec(lcpresult);
-
-    Helpers::Log("Creating suffix tree for: " + toProc + ".");
-    SuffixTree *tree = new SuffixTree();
-    SuffixTreeNode *root = tree->process(toProc, result, lcpresult);
-    Helpers::LogSuffixTree(root);
-    
-    delete sa;
-    delete lcp;
-    delete tree;
+//
+//    Helpers::Log("Creating LCP array for: " + toProc + ".");
+//    LcpArray *lcp = new LcpArray();
+//    std::vector<Prefix*> lcpresult = lcp->build(result);
+//    Helpers::LogPrefixVec(lcpresult);
+//
+//    Helpers::Log("Creating suffix tree for: " + toProc + ".");
+//    SuffixTree *tree = new SuffixTree();
+//    SuffixTreeNode *root = tree->build(toProc, result, lcpresult);
+//    Helpers::LogSuffixTree(root);
+//
+//    delete sa;
+//    delete lcp;
+//    delete tree;
 }

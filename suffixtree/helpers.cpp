@@ -46,7 +46,7 @@ void Helpers::Log(std::vector<std::string> messages)
 void Helpers::LogHeader(std::string message)
 {
     std::transform(message.begin(), message.end(), message.begin(), toupper);
-    std::cout << message << std::endl << std::endl;
+    std::cout << std::endl << message << std::endl << std::endl;
 }
 
 /**
@@ -120,9 +120,11 @@ void Helpers::LogSuffixTree(SuffixTreeNode *node)
 void Helpers::LogSuffixTreeNode(SuffixTreeNode *node, long depth)
 {
     std::cout << "["
-                << node->edgeText
-                << " : "
-                << node->index
+                << node->edgeStart << " : "
+                << node->edgeEnd << " : "
+                << node->edgeText << " : "
+                << node->index << " : "
+                << node->stringDepth
                 << "]" << std::endl;
     Helpers::LogSuffixTreeNodeChildren(node->children, depth);
 }
@@ -137,8 +139,8 @@ void Helpers::LogSuffixTreeNodeChildren(std::map<char, SuffixTreeNode *> childre
 {
     for (auto elem : children)
     {
-        for (int i = 0; i < depth; i++) { std::cout << "--"; }
         std::cout << elem.first;
+        for (int i = 0; i < depth; i++) { std::cout << "--"; }
         Helpers::LogSuffixTreeNode(elem.second, depth + 1);
     }
 }

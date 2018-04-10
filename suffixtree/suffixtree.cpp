@@ -8,6 +8,7 @@
 
 #include <iostream>
 
+#include "helpers.hpp"
 #include "suffixtreenode.hpp"
 #include "suffixtree.hpp"
 #include "suffix.hpp"
@@ -21,7 +22,7 @@
  @param lcparray the lcp array generated from the text.
  @return the root suffix tree node to be reported.
  */
-SuffixTreeNode* SuffixTree::process(std::string text, std::vector<Suffix*> suffixarray, std::vector<Prefix*> lcparray)
+SuffixTreeNode* SuffixTree::build(std::string text, std::vector<Suffix*> suffixarray, std::vector<Prefix*> lcparray)
 {
     SuffixTreeNode *root = new SuffixTreeNode(NULL, "", 0, -1, -1, -1);
     
@@ -56,6 +57,7 @@ SuffixTreeNode* SuffixTree::process(std::string text, std::vector<Suffix*> suffi
         }
     }
     
+    this->root = root;
     return root;
 }
 
@@ -73,7 +75,7 @@ SuffixTreeNode *SuffixTree::createNewLeaf(SuffixTreeNode *cur, std::string text,
     long edgeEnd = text.length() - 1;
     
     SuffixTreeNode *leaf = new SuffixTreeNode(cur,
-                                              suffix->getSuffixText(),
+                                              text.substr(edgeStart, edgeEnd),
                                               text.length() - suffix->getIndex(),
                                               edgeStart,
                                               edgeEnd,
@@ -99,7 +101,7 @@ SuffixTreeNode *SuffixTree::forkEdge(SuffixTreeNode *cur, std::string text, long
     char midChar = text[edgeStart + offset];
     
     SuffixTreeNode *midNode = new SuffixTreeNode(cur,
-                                                 "",
+                                                 text.substr(edgeStart, offset),
                                                  cur->stringDepth + offset,
                                                  edgeStart,
                                                  edgeStart + offset - 1,
@@ -108,6 +110,85 @@ SuffixTreeNode *SuffixTree::forkEdge(SuffixTreeNode *cur, std::string text, long
     midNode->children[midChar] = cur->children[startChar];
     cur->children[startChar]->parent = midNode;
     cur->children[startChar]->edgeStart += offset;
+    
+    long newLeafEdgeStart = cur->children[startChar]->edgeStart;
+    
+    cur->children[startChar]->edgeText = text.substr(newLeafEdgeStart);
     cur->children[startChar] = midNode;
     return midNode;
 }
+
+/**
+ This function finds a substring within the larger body of text. It only returns
+ a single result starting from index 0, and it used as a litmus test to ensure
+ that the suffix array is properly populating itself.
+
+ @param cur This is the current pointer to start traversal from.
+ @param text This is the query text to search for in the suffix tree.
+ @return A single suffix tree node pointer with all attached children.
+ */
+SuffixTreeNode *SuffixTree::findSubstring(SuffixTreeNode *cur, std::string text)
+{
+    // if node is null, well... not much we can do.
+    if (cur != NULL) {
+        
+        // get the starting character of the substring.
+        char start = text[0];
+        
+        // go through all the children of the current node.
+        for (auto elem : cur->children) {
+            // if the first character tag matches investigate.
+            if (elem.first == start) {
+                // pull the suffix from the tree.
+                std::string suffix = elem.second->edgeText;
+                // if they are exact matches, or the search text
+                // exists INSIDE of the suffix, return the suffix.
+                if ((suffix.compare(text) == 0)
+                    || (charCheck(suffix, text) == 0))
+                {
+                    return elem.second;
+                }
+            }
+        }
+    }
+    return NULL;
+}
+
+/**
+ This function accepts two strings and does a character by character comparison
+ by traversing them in linear fashion. If a character is found to be out of sync
+ with the cohort string, the function will break and return false.
+
+ @param t1 The suffix to check.
+ @param t2 The query string to use to check against the suffix.
+ @return Integer value of 0 or -1 indicating success. 0 = success.
+ */
+int SuffixTree::charCheck(std::string t1, std::string t2)
+{
+    // if the search string is bigger than the suffix no subtring
+    // can be found.
+    if (t1.length() < t2.length()) return -1;
+    
+    bool good = false;
+    // go through character by character.
+    for (int i = 0; i < t2.length(); i++) {
+        // if both characters are == then good.
+        good = (t1[i] == t2[i]) ? true : false;
+        
+        if (!good) break;
+    }
+    
+    // return 0 if substring exists.
+    return good ? 0 : -1;
+}
+
+/**
+ This function returns the last created root.
+
+ @return A single suffix tree node pointer.
+ */
+SuffixTreeNode *SuffixTree::getRoot() {
+    return this->root;
+}
+
+

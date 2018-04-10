@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2656221207BE01D005FC8EB /* textstat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A265621F207BE01D005FC8EB /* textstat.cpp */; };
+		A265623C207D08CD005FC8EB /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA6326207341B1005676C6 /* helpers.cpp */; };
+		A265623D207D08CD005FC8EB /* lcparray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631E20733E86005676C6 /* lcparray.cpp */; };
+		A265623E207D08CD005FC8EB /* prefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA63292074532F005676C6 /* prefix.cpp */; };
+		A265623F207D08CD005FC8EB /* suffix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631520733E85005676C6 /* suffix.cpp */; };
+		A2656240207D08CD005FC8EB /* suffixarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631A20733E86005676C6 /* suffixarray.cpp */; };
+		A2656241207D08CD005FC8EB /* suffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631C20733E86005676C6 /* suffixtree.cpp */; };
+		A2656242207D08CD005FC8EB /* textstat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A265621F207BE01D005FC8EB /* textstat.cpp */; };
+		A2656243207D08CD005FC8EB /* testsuffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2D692A1207871BA00F2A171 /* testsuffixtree.cpp */; };
+		A2656244207D08CD005FC8EB /* testtextstat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2656222207BE06F005FC8EB /* testtextstat.cpp */; };
+		A2656245207D08CD005FC8EB /* runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2D692AA2078803A00F2A171 /* runner.cpp */; };
 		A2AA631F20733E86005676C6 /* suffix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631520733E85005676C6 /* suffix.cpp */; };
 		A2AA632120733E86005676C6 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631920733E86005676C6 /* application.cpp */; };
 		A2AA632220733E86005676C6 /* suffixarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631A20733E86005676C6 /* suffixarray.cpp */; };
 		A2AA632320733E86005676C6 /* suffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631C20733E86005676C6 /* suffixtree.cpp */; };
-		A2AA632420733E86005676C6 /* lcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631E20733E86005676C6 /* lcp.cpp */; };
+		A2AA632420733E86005676C6 /* lcparray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631E20733E86005676C6 /* lcparray.cpp */; };
 		A2AA6328207341B1005676C6 /* helpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA6326207341B1005676C6 /* helpers.cpp */; };
 		A2AA632B2074532F005676C6 /* prefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA63292074532F005676C6 /* prefix.cpp */; };
-		A2F93BDE2076798C003E5CFE /* suffixarrayparallel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2F93BDC2076798C003E5CFE /* suffixarrayparallel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,26 +37,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A2D69296207870C000F2A171 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A265621F207BE01D005FC8EB /* textstat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = textstat.cpp; sourceTree = "<group>"; };
+		A2656220207BE01D005FC8EB /* textstat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = textstat.hpp; sourceTree = "<group>"; };
+		A2656222207BE06F005FC8EB /* testtextstat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testtextstat.cpp; sourceTree = "<group>"; };
 		A2AA630A20733DEA005676C6 /* suffixtree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = suffixtree; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AA631420733E85005676C6 /* suffix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suffix.hpp; sourceTree = "<group>"; };
 		A2AA631520733E85005676C6 /* suffix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suffix.cpp; sourceTree = "<group>"; };
 		A2AA631620733E85005676C6 /* suffixtreenode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suffixtreenode.hpp; sourceTree = "<group>"; };
-		A2AA631720733E85005676C6 /* lcp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lcp.hpp; sourceTree = "<group>"; };
+		A2AA631720733E85005676C6 /* lcparray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lcparray.hpp; sourceTree = "<group>"; };
 		A2AA631920733E86005676C6 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		A2AA631A20733E86005676C6 /* suffixarray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suffixarray.cpp; sourceTree = "<group>"; };
 		A2AA631B20733E86005676C6 /* suffixarray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suffixarray.hpp; sourceTree = "<group>"; };
 		A2AA631C20733E86005676C6 /* suffixtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suffixtree.cpp; sourceTree = "<group>"; };
 		A2AA631D20733E86005676C6 /* suffixtree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suffixtree.hpp; sourceTree = "<group>"; };
-		A2AA631E20733E86005676C6 /* lcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lcp.cpp; sourceTree = "<group>"; };
+		A2AA631E20733E86005676C6 /* lcparray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lcparray.cpp; sourceTree = "<group>"; };
 		A2AA6326207341B1005676C6 /* helpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = helpers.cpp; sourceTree = "<group>"; };
 		A2AA6327207341B1005676C6 /* helpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = helpers.hpp; sourceTree = "<group>"; };
 		A2AA63292074532F005676C6 /* prefix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prefix.cpp; sourceTree = "<group>"; };
 		A2AA632A2074532F005676C6 /* prefix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prefix.hpp; sourceTree = "<group>"; };
-		A2F93BDC2076798C003E5CFE /* suffixarrayparallel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = suffixarrayparallel.cpp; sourceTree = "<group>"; };
-		A2F93BDD2076798C003E5CFE /* suffixarrayparallel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = suffixarrayparallel.hpp; sourceTree = "<group>"; };
+		A2D69298207870C000F2A171 /* testsuffixtree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testsuffixtree; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D692A1207871BA00F2A171 /* testsuffixtree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testsuffixtree.cpp; sourceTree = "<group>"; };
+		A2D692A920787FD100F2A171 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		A2D692AA2078803A00F2A171 /* runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = runner.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +81,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A2D69295207870C000F2A171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A265623B207D0881005FC8EB /* testsuffixtree */ = {
+			isa = PBXGroup;
+			children = (
+				A2D692A920787FD100F2A171 /* include */,
+				A2D692A1207871BA00F2A171 /* testsuffixtree.cpp */,
+				A2656222207BE06F005FC8EB /* testtextstat.cpp */,
+				A2D692AA2078803A00F2A171 /* runner.cpp */,
+			);
+			path = testsuffixtree;
+			sourceTree = "<group>";
+		};
 		A2AA630120733DEA005676C6 = {
 			isa = PBXGroup;
 			children = (
-				A2AA630C20733DEA005676C6 /* suffixtree */,
 				A2AA630B20733DEA005676C6 /* Products */,
+				A2AA630C20733DEA005676C6 /* suffixtree */,
+				A265623B207D0881005FC8EB /* testsuffixtree */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				A2AA630A20733DEA005676C6 /* suffixtree */,
+				A2D69298207870C000F2A171 /* testsuffixtree */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,8 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				A2AA631920733E86005676C6 /* application.cpp */,
-				A2AA631E20733E86005676C6 /* lcp.cpp */,
-				A2AA631720733E85005676C6 /* lcp.hpp */,
+				A2AA6326207341B1005676C6 /* helpers.cpp */,
+				A2AA6327207341B1005676C6 /* helpers.hpp */,
+				A2AA631E20733E86005676C6 /* lcparray.cpp */,
+				A2AA631720733E85005676C6 /* lcparray.hpp */,
+				A2AA63292074532F005676C6 /* prefix.cpp */,
+				A2AA632A2074532F005676C6 /* prefix.hpp */,
 				A2AA631520733E85005676C6 /* suffix.cpp */,
 				A2AA631420733E85005676C6 /* suffix.hpp */,
 				A2AA631A20733E86005676C6 /* suffixarray.cpp */,
@@ -89,12 +137,8 @@
 				A2AA631C20733E86005676C6 /* suffixtree.cpp */,
 				A2AA631D20733E86005676C6 /* suffixtree.hpp */,
 				A2AA631620733E85005676C6 /* suffixtreenode.hpp */,
-				A2AA6326207341B1005676C6 /* helpers.cpp */,
-				A2AA6327207341B1005676C6 /* helpers.hpp */,
-				A2AA63292074532F005676C6 /* prefix.cpp */,
-				A2AA632A2074532F005676C6 /* prefix.hpp */,
-				A2F93BDC2076798C003E5CFE /* suffixarrayparallel.cpp */,
-				A2F93BDD2076798C003E5CFE /* suffixarrayparallel.hpp */,
+				A265621F207BE01D005FC8EB /* textstat.cpp */,
+				A2656220207BE01D005FC8EB /* textstat.hpp */,
 			);
 			path = suffixtree;
 			sourceTree = "<group>";
@@ -119,6 +163,23 @@
 			productReference = A2AA630A20733DEA005676C6 /* suffixtree */;
 			productType = "com.apple.product-type.tool";
 		};
+		A2D69297207870C000F2A171 /* testsuffixtree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2D6929C207870C000F2A171 /* Build configuration list for PBXNativeTarget "testsuffixtree" */;
+			buildPhases = (
+				A2D69294207870C000F2A171 /* Sources */,
+				A2D69295207870C000F2A171 /* Frameworks */,
+				A2D69296207870C000F2A171 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testsuffixtree;
+			productName = testsuffixtree;
+			productReference = A2D69298207870C000F2A171 /* testsuffixtree */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,6 +190,9 @@
 				ORGANIZATIONNAME = "Brad Lindsay";
 				TargetAttributes = {
 					A2AA630920733DEA005676C6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					A2D69297207870C000F2A171 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -146,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				A2AA630920733DEA005676C6 /* suffixtree */,
+				A2D69297207870C000F2A171 /* testsuffixtree */,
 			);
 		};
 /* End PBXProject section */
@@ -155,14 +220,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2656221207BE01D005FC8EB /* textstat.cpp in Sources */,
 				A2AA632120733E86005676C6 /* application.cpp in Sources */,
-				A2F93BDE2076798C003E5CFE /* suffixarrayparallel.cpp in Sources */,
 				A2AA632B2074532F005676C6 /* prefix.cpp in Sources */,
 				A2AA6328207341B1005676C6 /* helpers.cpp in Sources */,
 				A2AA631F20733E86005676C6 /* suffix.cpp in Sources */,
 				A2AA632220733E86005676C6 /* suffixarray.cpp in Sources */,
-				A2AA632420733E86005676C6 /* lcp.cpp in Sources */,
+				A2AA632420733E86005676C6 /* lcparray.cpp in Sources */,
 				A2AA632320733E86005676C6 /* suffixtree.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D69294207870C000F2A171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A265623C207D08CD005FC8EB /* helpers.cpp in Sources */,
+				A265623D207D08CD005FC8EB /* lcparray.cpp in Sources */,
+				A265623E207D08CD005FC8EB /* prefix.cpp in Sources */,
+				A265623F207D08CD005FC8EB /* suffix.cpp in Sources */,
+				A2656240207D08CD005FC8EB /* suffixarray.cpp in Sources */,
+				A2656241207D08CD005FC8EB /* suffixtree.cpp in Sources */,
+				A2656242207D08CD005FC8EB /* textstat.cpp in Sources */,
+				A2656243207D08CD005FC8EB /* testsuffixtree.cpp in Sources */,
+				A2656244207D08CD005FC8EB /* testtextstat.cpp in Sources */,
+				A2656245207D08CD005FC8EB /* runner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +302,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,6 +356,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -296,6 +382,26 @@
 			};
 			name = Release;
 		};
+		A2D6929D207870C000F2A171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9RM22837G;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/cppunit/1.14.0/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2D6929E207870C000F2A171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9RM22837G;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/cppunit/1.14.0/lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -313,6 +419,15 @@
 			buildConfigurations = (
 				A2AA631220733DEA005676C6 /* Debug */,
 				A2AA631320733DEA005676C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2D6929C207870C000F2A171 /* Build configuration list for PBXNativeTarget "testsuffixtree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2D6929D207870C000F2A171 /* Debug */,
+				A2D6929E207870C000F2A171 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

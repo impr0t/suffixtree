@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include <map>
+#include <mutex>
 
 #include "suffix.hpp"
 #include "prefix.hpp"
@@ -19,6 +20,7 @@
 
 class Helpers {
 public:
+    static std::mutex MyMutex;
     static void Log(std::string message);
     static void Log(std::vector<std::string> messages);
     static void LogHeader(std::string message);

@@ -1,6 +1,6 @@
 //
-//  lcp.hpp
-//  lcp
+//  lcparray.hpp
+//  lcparray
 //
 //  Created by Brad Lindsay on 2018-03-20.
 //  Copyright © 2018 Brad Lindsay. All rights reserved.
@@ -15,12 +15,14 @@
 #include "suffix.hpp"
 #include "prefix.hpp"
 
-class Lcp
+class LcpArray
 {
 private:
     std::vector<Prefix*> last;
 public:
     std::vector<Prefix*> build(std::vector<Suffix*> suffixArray);
+    std::vector<Prefix*> getLast();
+    Prefix* getLongestCommonPrefix();
 };
 
 #endif /* lcp_hpp */

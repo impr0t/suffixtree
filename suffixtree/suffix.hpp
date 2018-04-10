@@ -18,8 +18,6 @@ private:
     std::string text;
     
 public:
-    Suffix();
-    ~Suffix();
     void setIndex(long ind);
     void setSuffixText(std::string text);
     long getIndex();

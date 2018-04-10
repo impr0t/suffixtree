@@ -1,11 +1,6 @@
 #include <string>
 #include "suffix.hpp"
 
-Suffix::Suffix() {}
-Suffix::~Suffix(){};
-
-/** GETTER AND SETTERS **/
-
 /**
  * Suffix Index Property Setter
  * */

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:suffixtree.xcodeproj">
+      location = "group:../testsuffixtree">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

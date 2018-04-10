@@ -6,4 +6,9 @@
 //  Copyright © 2018 Brad Lindsay. All rights reserved.
 //
 
-#include <stdio.h>
+
+/**
+ This define must only exist in a single file in the unit test project.
+ */
+#define CATCH_CONFIG_MAIN
+#include "include/catch.hpp"

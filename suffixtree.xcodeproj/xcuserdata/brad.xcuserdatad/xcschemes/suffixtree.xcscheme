@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2AA630920733DEA005676C6"
-            BuildableName = "suffixtree"
-            BlueprintName = "suffixtree"
+            BlueprintIdentifier = "A2D69297207870C000F2A171"
+            BuildableName = "testsuffixtree"
+            BlueprintName = "testsuffixtree"
             ReferencedContainer = "container:suffixtree.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "MNSERSDVTLYQPFLDYAIAYMRSRLDLEPYPIPTGFESNSAVVGKGKNQEEVVTTSYAFQTAKLRQIRA&#10;AHVQGGNSLQVLNFVIFPHLNYDLPFFGADLVTLPGGHLIALDMQPLFRDDSAYQAKYTEPILPIFHAHQ&#10;QHLSWGGDFPEEAQPFFSPAFLWTRPQETAVVETQVFAAFKDYLKAYLDFVEQAEAVTDSQNLVAIKQAQ&#10;LRYLRYRAEKDPARGMFKRFYGAEWTEEYIHGFLFDLERKLTVVK"
+            argument = "bradisradicalandbradilicious"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
