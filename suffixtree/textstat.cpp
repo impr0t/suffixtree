@@ -73,10 +73,8 @@ std::string TextStat::findSubString(std::string query)
     
     // report back if it's found.
     if (found != NULL) {
-        return (query + " was found at "
-        + std::to_string(found->edgeStart)
-        + " and ends at "
-        + std::to_string(found->edgeEnd));
+        return ("["+query+"]" + " was found at "
+                + std::to_string(found->edgeStart));
     }
     
     // otherwise not found.
