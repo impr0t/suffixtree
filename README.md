@@ -10,16 +10,16 @@ To run the application access the ../bin directory and run ./suffixtree. The app
 Once the text has been provided for processing, a menu will appear. There will be several options available, all of which are quite self explanitory.
 
 1. View Suffix Array
-  *Produces a suffix array for the given processed text.
+  * Produces a suffix array for the given processed text.
 2. View LCP Array
-  *Produces an LCP array for the given processed text.
+  * Produces an LCP array for the given processed text.
 3. View Suffix Tree
-  *Produces a suffix tree for the given processed text.
+  * Produces a suffix tree for the given processed text.
 4. Get Longest Substring
-  *Finds the longest common substring in the given processed text.
+  * Finds the longest common substring in the given processed text.
 5. Substring Query
-  *Locates a substring within the given text, you will be prompted for input.
+  * Locates a substring within the given text, you will be prompted for input.
 6. Get All Substrings
-  *Produces a list of all occurences of a substring in the processed text, you will be prompted for input.
+  * Produces a list of all occurences of a substring in the processed text, you will be prompted for input.
 7. Exit
-  *Exits the program.
+  * Exits the program.
