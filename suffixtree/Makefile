@@ -13,6 +13,7 @@ MAINOUTPUT = $(BIN)suffixtree
 MAINOBJECTS = *.cpp
 
 all:
+	mkdir $(BIN)
 	$(CC) -o $(MAINOUTPUT) $(CFLAGS) $(MAINOBJECTS)
 
 run:

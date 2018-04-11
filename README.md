@@ -1,1 +1,3 @@
-# suffixtree
+# Index Implementation
+
+##Usage: 

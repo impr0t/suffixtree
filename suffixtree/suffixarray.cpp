@@ -58,32 +58,32 @@ std::vector<Suffix*> SuffixArray::build(std::string text)
  */
 std::vector<Suffix *> SuffixArray::buildParallel(std::string text)
 {
-    this->text = text;
-    this->textlength = text.length();
-    
-    last.clear();
-    last.resize(textlength);
-    
-    const int maxThreads = 5;
-    std::vector<std::thread> threads;
-    for (int i = 0; i < maxThreads; i++) {
-        long s = 0;
-        long e = 0;
-        
-        s = i * (textlength / maxThreads);
-        e = (i + 1) * (textlength / maxThreads);
-        if ((i + 1) == maxThreads) (e += textlength % maxThreads);
-        
-        std::thread th(&SuffixArray::buildSection, this, std::ref(s), std::ref(e), std::ref(last));
-        threads.emplace_back(std::move(th));
-    }
-    
-    for (auto &t : threads) {
-        t.join();
-    }
-    
-    /* sort the entire suffixes vector */
-    std::sort(last.begin(), last.end(), Suffix::compare);
+//    this->text = text;
+//    this->textlength = text.length();
+//
+//    last.clear();
+//    last.resize(textlength);
+//
+//    const int maxThreads = 5;
+//    std::vector<std::thread> threads;
+//    for (int i = 0; i < maxThreads; i++) {
+//        long s = 0;
+//        long e = 0;
+//        
+//        s = i * (textlength / maxThreads);
+//        e = (i + 1) * (textlength / maxThreads);
+//        if ((i + 1) == maxThreads) (e += textlength % maxThreads);
+//
+//        std::thread th(&SuffixArray::buildSection, this, std::ref(s), std::ref(e), std::ref(last));
+//        threads.push_back(std::move(th));
+//    }
+//
+//    for (auto &t : threads) {
+//        t.join();
+//    }
+//
+//    /* sort the entire suffixes vector */
+//    std::sort(last.begin(), last.end(), Suffix::compare);
     
     return last;
 }
