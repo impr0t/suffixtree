@@ -83,12 +83,16 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:ad54b76e8c7b0658a69392a98bba7ca5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testtextstat_8cpp.html#ad54b76e8c7b0658a69392a98bba7ca5d">SCENARIO</a> (&quot;A textstat object needs to be created.&quot;)</td></tr>
 <tr class="separator:ad54b76e8c7b0658a69392a98bba7ca5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae68972b313dc6a9b52813ae8caacd6d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testtextstat_8cpp.html#ae68972b313dc6a9b52813ae8caacd6d8">SCENARIO</a> (&quot;Get information on the longest common prefix&quot;)</td></tr>
-<tr class="separator:ae68972b313dc6a9b52813ae8caacd6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c259811ee8a744077dcfc068a6b881"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testtextstat_8cpp.html#a69c259811ee8a744077dcfc068a6b881">SCENARIO</a> (&quot;Get information on the longest common prefix.&quot;)</td></tr>
+<tr class="separator:a69c259811ee8a744077dcfc068a6b881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806c9ddccaca1c88c98d098ed1bd3a06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testtextstat_8cpp.html#a806c9ddccaca1c88c98d098ed1bd3a06">SCENARIO</a> (&quot;Finding a substring.&quot;)</td></tr>
+<tr class="separator:a806c9ddccaca1c88c98d098ed1bd3a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863221dc4ddfe9fd58d3382f2bf60f17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testtextstat_8cpp.html#a863221dc4ddfe9fd58d3382f2bf60f17">SCENARIO</a> (&quot;Getting all substrings.&quot;)</td></tr>
+<tr class="separator:a863221dc4ddfe9fd58d3382f2bf60f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad54b76e8c7b0658a69392a98bba7ca5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad54b76e8c7b0658a69392a98bba7ca5d">&#9670;&nbsp;</a></span>SCENARIO() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54b76e8c7b0658a69392a98bba7ca5d">&#9670;&nbsp;</a></span>SCENARIO() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,12 +108,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="testtextstat_8cpp_source.html#l00013">13</a> of file <a class="el" href="testtextstat_8cpp_source.html">testtextstat.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                                   {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    GIVEN(<span class="stringliteral">&quot;A null string&quot;</span>) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::string s;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(s);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        REQUIRE(t != NULL);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">delete</span> t;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    GIVEN(<span class="stringliteral">&quot;An empty string&quot;</span>) {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::string s = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(s);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        REQUIRE(t != NULL);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">delete</span> t;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    GIVEN(<span class="stringliteral">&quot;A populated string&quot;</span>) {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::string s = <span class="stringliteral">&quot;ababaa&quot;</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(s);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        REQUIRE(t != NULL);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">delete</span> t;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div><div class="ttc" id="class_text_stat_html"><div class="ttname"><a href="class_text_stat.html">TextStat</a></div><div class="ttdef"><b>Definition:</b> <a href="textstat_8hpp_source.html#l00022">textstat.hpp:22</a></div></div>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                                   {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    GIVEN(<span class="stringliteral">&quot;A null string&quot;</span>) {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        std::string s;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(s);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        REQUIRE(t != NULL);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">delete</span> t;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    GIVEN(<span class="stringliteral">&quot;An empty string&quot;</span>) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::string s = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(s);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        REQUIRE(t != NULL);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">delete</span> t;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    GIVEN(<span class="stringliteral">&quot;A populated string&quot;</span>) {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::string s = <span class="stringliteral">&quot;ababaa&quot;</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(s);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        REQUIRE(t != NULL);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">delete</span> t;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div><div class="ttc" id="class_text_stat_html"><div class="ttname"><a href="class_text_stat.html">TextStat</a></div><div class="ttdef"><b>Definition:</b> <a href="textstat_8hpp_source.html#l00022">textstat.hpp:22</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ae68972b313dc6a9b52813ae8caacd6d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae68972b313dc6a9b52813ae8caacd6d8">&#9670;&nbsp;</a></span>SCENARIO() <span class="overload">[2/2]</span></h2>
+<a id="a69c259811ee8a744077dcfc068a6b881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c259811ee8a744077dcfc068a6b881">&#9670;&nbsp;</a></span>SCENARIO() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,16 +121,59 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">SCENARIO </td>
           <td>(</td>
-          <td class="paramtype">&quot;Get information on the longest common prefix&quot;&#160;</td>
+          <td class="paramtype">&quot;Get information on the longest common prefix.&quot;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="testtextstat_8cpp_source.html#l00037">37</a> of file <a class="el" href="testtextstat_8cpp_source.html">testtextstat.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                                         {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    GIVEN(<span class="stringliteral">&quot;The string = &#39;ababaa&#39;&quot;</span>) {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(<span class="stringliteral">&quot;ababaa&quot;</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_prefix.html">Prefix</a> *p = t-&gt;getLongestCommonPrefix();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        REQUIRE(p-&gt;<a class="code" href="class_prefix.html#ad64846602df331df3a0d956a780b3dc4">getLength</a>() == 3);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div><div class="ttc" id="class_prefix_html_ad64846602df331df3a0d956a780b3dc4"><div class="ttname"><a href="class_prefix.html#ad64846602df331df3a0d956a780b3dc4">Prefix::getLength</a></div><div class="ttdeci">long getLength()</div><div class="ttdef"><b>Definition:</b> <a href="prefix_8cpp_source.html#l00029">prefix.cpp:29</a></div></div>
-<div class="ttc" id="class_prefix_html"><div class="ttname"><a href="class_prefix.html">Prefix</a></div><div class="ttdef"><b>Definition:</b> <a href="prefix_8hpp_source.html#l00015">prefix.hpp:15</a></div></div>
+<p class="definition">Definition at line <a class="el" href="testtextstat_8cpp_source.html#l00036">36</a> of file <a class="el" href="testtextstat_8cpp_source.html">testtextstat.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                                          {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    GIVEN(<span class="stringliteral">&quot;The string = &#39;ababaa&#39;&quot;</span>) {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(<span class="stringliteral">&quot;ababaa&quot;</span>);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::string r = t-&gt;<a class="code" href="class_text_stat.html#a8b72da608fefb558d2c5d8767b566da0">getLongestSubstring</a>();</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        REQUIRE(r.length() == 3);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="class_text_stat_html"><div class="ttname"><a href="class_text_stat.html">TextStat</a></div><div class="ttdef"><b>Definition:</b> <a href="textstat_8hpp_source.html#l00022">textstat.hpp:22</a></div></div>
+<div class="ttc" id="class_text_stat_html_a8b72da608fefb558d2c5d8767b566da0"><div class="ttname"><a href="class_text_stat.html#a8b72da608fefb558d2c5d8767b566da0">TextStat::getLongestSubstring</a></div><div class="ttdeci">std::string getLongestSubstring()</div><div class="ttdef"><b>Definition:</b> <a href="textstat_8cpp_source.html#l00045">textstat.cpp:45</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a806c9ddccaca1c88c98d098ed1bd3a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806c9ddccaca1c88c98d098ed1bd3a06">&#9670;&nbsp;</a></span>SCENARIO() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SCENARIO </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Finding a substring.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="testtextstat_8cpp_source.html#l00044">44</a> of file <a class="el" href="testtextstat_8cpp_source.html">testtextstat.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                 {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    GIVEN(<span class="stringliteral">&quot;The string = &#39;ababaa&#39;&quot;</span>) {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(<span class="stringliteral">&quot;ababaa&quot;</span>);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::string r = t-&gt;<a class="code" href="class_text_stat.html#a02417dd678afed3c3341f918d94656d5">findSubString</a>(<span class="stringliteral">&quot;ba&quot;</span>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        REQUIRE(r.compare(<span class="stringliteral">&quot;Not Found!&quot;</span>) != 0);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="ttc" id="class_text_stat_html_a02417dd678afed3c3341f918d94656d5"><div class="ttname"><a href="class_text_stat.html#a02417dd678afed3c3341f918d94656d5">TextStat::findSubString</a></div><div class="ttdeci">std::string findSubString(std::string query)</div><div class="ttdef"><b>Definition:</b> <a href="textstat_8cpp_source.html#l00068">textstat.cpp:68</a></div></div>
+<div class="ttc" id="class_text_stat_html"><div class="ttname"><a href="class_text_stat.html">TextStat</a></div><div class="ttdef"><b>Definition:</b> <a href="textstat_8hpp_source.html#l00022">textstat.hpp:22</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a863221dc4ddfe9fd58d3382f2bf60f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863221dc4ddfe9fd58d3382f2bf60f17">&#9670;&nbsp;</a></span>SCENARIO() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SCENARIO </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Getting all substrings.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="testtextstat_8cpp_source.html#l00052">52</a> of file <a class="el" href="testtextstat_8cpp_source.html">testtextstat.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                    {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    GIVEN(<span class="stringliteral">&quot;This string = &#39;ababaa&#39;&quot;</span>) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_text_stat.html">TextStat</a> *t = <span class="keyword">new</span> <a class="code" href="class_text_stat.html">TextStat</a>(<span class="stringliteral">&quot;ababaa&quot;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::string r = t-&gt;<a class="code" href="class_text_stat.html#a06e4785189d62ed0afafb6cfdfbcb3e6">getAllSubstrings</a>(<span class="stringliteral">&quot;ba&quot;</span>);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        REQUIRE(r.length() &gt; 0);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div><div class="ttc" id="class_text_stat_html_a06e4785189d62ed0afafb6cfdfbcb3e6"><div class="ttname"><a href="class_text_stat.html#a06e4785189d62ed0afafb6cfdfbcb3e6">TextStat::getAllSubstrings</a></div><div class="ttdeci">std::string getAllSubstrings(std::string query)</div><div class="ttdef"><b>Definition:</b> <a href="textstat_8cpp_source.html#l00121">textstat.cpp:121</a></div></div>
 <div class="ttc" id="class_text_stat_html"><div class="ttname"><a href="class_text_stat.html">TextStat</a></div><div class="ttdef"><b>Definition:</b> <a href="textstat_8hpp_source.html#l00022">textstat.hpp:22</a></div></div>
 </div><!-- fragment -->
 </div>

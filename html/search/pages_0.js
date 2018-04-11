@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['suffixtree',['suffixtree',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['index_20implementation',['Index Implementation',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

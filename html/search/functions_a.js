@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['viewlcparray',['viewLcpArray',['../class_text_stat.html#a1b7934bf1645de8d84283b1f83c7da0f',1,'TextStat']]],
-  ['viewsuffixarray',['viewSuffixArray',['../class_text_stat.html#a19f3bfff103df0a5baf380c9d0619add',1,'TextStat']]],
-  ['viewsuffixtree',['viewSuffixTree',['../class_text_stat.html#ac38210e346716f1a743836e103633103',1,'TextStat']]]
+  ['_7esuffixtreenode',['~SuffixTreeNode',['../class_suffix_tree_node.html#a0bc685c0aa5a72787785cfe379fab214',1,'SuffixTreeNode']]]
 ];

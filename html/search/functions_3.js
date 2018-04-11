@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['getallsubstringpositions',['getAllSubstringPositions',['../class_suffix_array.html#a40d226e9197a79887491b6759d29fdbe',1,'SuffixArray']]],
+  ['getallsubstrings',['getAllSubstrings',['../class_text_stat.html#a06e4785189d62ed0afafb6cfdfbcb3e6',1,'TextStat']]],
   ['getindex',['getIndex',['../class_suffix.html#a4dee6613d812708bdaed89f5216500cf',1,'Suffix']]],
   ['getlast',['getLast',['../class_lcp_array.html#a4c4a9a7f8a151fbc825b36dfd79871be',1,'LcpArray::getLast()'],['../class_suffix_array.html#a70a9b42d447b4a2c774ba172af0aef72',1,'SuffixArray::getLast()']]],
   ['getlength',['getLength',['../class_prefix.html#ad64846602df331df3a0d956a780b3dc4',1,'Prefix']]],
