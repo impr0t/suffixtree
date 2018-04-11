@@ -8,9 +8,6 @@
 
 #include "prefix.hpp"
 
-Prefix::Prefix(){};
-Prefix::~Prefix(){};
-
 /**
  Sets the prefix text.
 

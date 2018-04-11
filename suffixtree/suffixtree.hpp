@@ -22,7 +22,7 @@ class SuffixTree
 public:
     SuffixTreeNode *getRoot();
     SuffixTreeNode *build(std::string text, std::vector<Suffix*> suffixarray, std::vector<Prefix*> lcparray);
-    SuffixTreeNode *findSubstring(SuffixTreeNode *cur, std::string text);
+    SuffixTreeNode *findSubstring(SuffixTreeNode *cur, std::string text, int c);
 private:
     SuffixTreeNode *createNewLeaf(SuffixTreeNode *cur, std::string text, Suffix* suffix);
     SuffixTreeNode *forkEdge(SuffixTreeNode *cur, std::string text, long edgeStart, long offset);

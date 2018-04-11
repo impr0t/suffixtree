@@ -69,7 +69,7 @@ std::string TextStat::findSubString(std::string query)
 {
     init();
     // search for the substring using the suffix tree.
-    SuffixTreeNode *found = st->findSubstring(st->getRoot(), query);
+    SuffixTreeNode *found = st->findSubstring(st->getRoot(), query, 0);
     
     // report back if it's found.
     if (found != NULL) {
@@ -111,4 +111,24 @@ void TextStat::viewLcpArray()
     Helpers::LogPrefixVec(lcp->getLast());
 }
 
+/**
+ This function leverages the suffix array to discover all substrings in a
+ given string by query.
 
+ @param query The query string.
+ @return a formatted string representing all found substrings.
+ */
+std::string TextStat::getAllSubstrings(std::string query)
+{
+    init();
+    std::vector<Suffix*> r = sa->getAllSubstringPositions(query);
+    std::string output = "";
+    for (auto elem : r) {
+        output += ("["
+                   + std::to_string(elem->getIndex())
+                   + " : "
+                   + elem->getSuffixText()
+                   + "]\r");
+    }
+    return output;
+}

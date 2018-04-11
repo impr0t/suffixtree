@@ -17,8 +17,6 @@ private:
     long length;
     std::string text;
 public:
-    Prefix();
-    ~Prefix();
     void setLength(long length);
     void setPrefixText(std::string text);
     long getLength();

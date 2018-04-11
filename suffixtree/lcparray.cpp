@@ -2,7 +2,7 @@
 
 
 /**
- This function accepts a prebuild suffix array and creates from it, an LCP array.
+ This function accepts a prebuilt suffix array and creates from it, an LCP array.
 
  @param suffixArray A prepopulated suffix array.
  @return A vector populated with prefix objects.

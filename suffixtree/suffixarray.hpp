@@ -26,6 +26,7 @@ private:
 public:
     std::vector<Suffix*> build(std::string text);
     std::vector<Suffix*> buildParallel(std::string text);
+    std::vector<Suffix*> getAllSubstringPositions(std::string text);
     std::vector<Suffix*> getLast();
 };
 

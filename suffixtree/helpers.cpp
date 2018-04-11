@@ -124,7 +124,6 @@ void Helpers::LogSuffixTreeNode(SuffixTreeNode *node, long depth)
                 << node->edgeEnd << " : "
                 << node->edgeText << " : "
                 << node->index << " : "
-                << node->stringDepth
                 << "]" << std::endl;
     Helpers::LogSuffixTreeNodeChildren(node->children, depth);
 }

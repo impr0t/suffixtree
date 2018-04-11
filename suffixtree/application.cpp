@@ -16,11 +16,13 @@
 
 int main(int argc, char *argv[])
 {
+    // prompt for input
     std::string input = "";
     Helpers::Log("Please enter text to process: ");
     std::getline(std::cin, input);
     Helpers::Log("Received : " + input);
     
+    // create the textstat object.
     std::string toProc(input);
     TextStat *t = new TextStat(toProc);
     
@@ -32,7 +34,8 @@ int main(int argc, char *argv[])
         Helpers::Log("3: View Suffix Tree");
         Helpers::Log("4: Get Longest Substring");
         Helpers::Log("5: Substring Query");
-        Helpers::Log("6: Exit");
+        Helpers::Log("6: Get All Substrings");
+        Helpers::Log("7: Exit");
         
         std::getline(std::cin, input);
         std::stringstream mySteam(input);
@@ -49,6 +52,12 @@ int main(int argc, char *argv[])
                     break;
                 }
                 case 6: {
+                    Helpers::Log("Enter query string:");
+                    std::getline(std::cin, input);
+                    Helpers::Log(t->getAllSubstrings(input));
+                    break;
+                }
+                case 7: {
                     delete t;
                     return 0;
                 }

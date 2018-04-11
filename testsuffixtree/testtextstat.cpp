@@ -11,7 +11,6 @@
 #include "../suffixtree/textstat.hpp"
 
 SCENARIO("A textstat object needs to be created.") {
-    
     GIVEN("A null string") {
         std::string s;
         TextStat *t = new TextStat(s);
@@ -34,11 +33,26 @@ SCENARIO("A textstat object needs to be created.") {
     }
 }
 
-SCENARIO("Get information on the longest common prefix") {
+SCENARIO("Get information on the longest common prefix.") {
     GIVEN("The string = 'ababaa'") {
-        
         TextStat *t = new TextStat("ababaa");
-        Prefix *p = t->getLongestCommonPrefix();
-        REQUIRE(p->getLength() == 3);
+        std::string r = t->getLongestSubstring();
+        REQUIRE(r.length() == 3);
+    }
+}
+
+SCENARIO("Finding a substring.") {
+    GIVEN("The string = 'ababaa'") {
+        TextStat *t = new TextStat("ababaa");
+        std::string r = t->findSubString("ba");
+        REQUIRE(r.compare("Not Found!") != 0);
+    }
+}
+
+SCENARIO("Getting all substrings.") {
+    GIVEN("This string = 'ababaa'") {
+        TextStat *t = new TextStat("ababaa");
+        std::string r = t->getAllSubstrings("ba");
+        REQUIRE(r.length() > 0);
     }
 }

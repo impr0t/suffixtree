@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['lcparray',['LcpArray',['../class_lcp_array.html',1,'']]],
-  ['log',['Log',['../class_helpers.html#ac74248c7df831a751237ffd90ff92e95',1,'Helpers::Log(std::string message)'],['../class_helpers.html#afbcf6b3f667813b0ad157a05864063cf',1,'Helpers::Log(std::vector&lt; std::string &gt; messages)']]],
-  ['logheader',['LogHeader',['../class_helpers.html#a841098fb78cf1c0d57ead5e464136ba6',1,'Helpers']]],
-  ['logprefix',['LogPrefix',['../class_helpers.html#a01167a7c690d22b989b782f953777ea0',1,'Helpers']]],
-  ['logprefixvec',['LogPrefixVec',['../class_helpers.html#a49c9ea35c045c6ea933df651ab97d543',1,'Helpers']]],
-  ['logsuffix',['LogSuffix',['../class_helpers.html#a8d6d8e7ac57784c6c720a8399b9f70ce',1,'Helpers']]],
-  ['logsuffixtree',['LogSuffixTree',['../class_helpers.html#a17e614aba64fe6495ccf16ec14673f82',1,'Helpers']]],
-  ['logsuffixtreenode',['LogSuffixTreeNode',['../class_helpers.html#a8280fc122d8d0f641774bd1ea8efda36',1,'Helpers']]],
-  ['logsuffixtreenodechildren',['LogSuffixTreeNodeChildren',['../class_helpers.html#a79f7f4084f42e37fb693a82af6e026b9',1,'Helpers']]],
-  ['logsuffixvec',['LogSuffixVec',['../class_helpers.html#a6696b941b1a051a962cd21e8439a6941',1,'Helpers']]]
+  ['getindex',['getIndex',['../class_suffix.html#a4dee6613d812708bdaed89f5216500cf',1,'Suffix']]],
+  ['getlast',['getLast',['../class_lcp_array.html#a4c4a9a7f8a151fbc825b36dfd79871be',1,'LcpArray::getLast()'],['../class_suffix_array.html#a70a9b42d447b4a2c774ba172af0aef72',1,'SuffixArray::getLast()']]],
+  ['getlength',['getLength',['../class_prefix.html#ad64846602df331df3a0d956a780b3dc4',1,'Prefix']]],
+  ['getlongestcommonprefix',['getLongestCommonPrefix',['../class_lcp_array.html#a9eaf109a64af2599e2a2c0d7d7649763',1,'LcpArray']]],
+  ['getlongestsubstring',['getLongestSubstring',['../class_text_stat.html#a8b72da608fefb558d2c5d8767b566da0',1,'TextStat']]],
+  ['getprefixtext',['getPrefixText',['../class_prefix.html#af8edd3fa8b94ae1162a0d63ed8999649',1,'Prefix']]],
+  ['getroot',['getRoot',['../class_suffix_tree.html#ac830f3555afe292b34eb169c861c8c6d',1,'SuffixTree']]],
+  ['getsuffixtext',['getSuffixText',['../class_suffix.html#ab89ce087fb8a1bc2f2b2fde553ce64d8',1,'Suffix']]]
 ];

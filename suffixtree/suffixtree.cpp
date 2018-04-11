@@ -127,26 +127,27 @@ SuffixTreeNode *SuffixTree::forkEdge(SuffixTreeNode *cur, std::string text, long
  @param text This is the query text to search for in the suffix tree.
  @return A single suffix tree node pointer with all attached children.
  */
-SuffixTreeNode *SuffixTree::findSubstring(SuffixTreeNode *cur, std::string text)
+SuffixTreeNode *SuffixTree::findSubstring(SuffixTreeNode *cur, std::string text, int c)
 {
     // if node is null, well... not much we can do.
     if (cur != NULL) {
         
-        // get the starting character of the substring.
-        char start = text[0];
-        
         // go through all the children of the current node.
         for (auto elem : cur->children) {
             // if the first character tag matches investigate.
-            if (elem.first == start) {
+            if (elem.first == text[c]) {
                 // pull the suffix from the tree.
                 std::string suffix = elem.second->edgeText;
                 // if they are exact matches, or the search text
                 // exists INSIDE of the suffix, return the suffix.
                 if ((suffix.compare(text) == 0)
-                    || (charCheck(suffix, text) == 0))
+                    || (charCheck(suffix, text.substr(c)) == 0))
                 {
-                    return elem.second;
+                    return cur;
+                }
+                else
+                {
+                    return findSubstring(elem.second, text, ++c);
                 }
             }
         }

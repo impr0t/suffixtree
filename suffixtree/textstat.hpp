@@ -24,6 +24,7 @@ public:
     TextStat(std::string input);
     std::string getLongestSubstring();
     std::string findSubString(std::string query);
+    std::string getAllSubstrings(std::string query);
     void viewSuffixTree();
     void viewSuffixArray();
     void viewLcpArray();

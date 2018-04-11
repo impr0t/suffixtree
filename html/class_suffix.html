@@ -71,12 +71,14 @@ $(function() {
 <div class="title">Suffix Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="suffix_8hpp_source.html">suffix.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a211c60a5b7ef4cfc8ab6f94a56a38c90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_suffix.html#a211c60a5b7ef4cfc8ab6f94a56a38c90">setIndex</a> (long ind)</td></tr>
 <tr class="separator:a211c60a5b7ef4cfc8ab6f94a56a38c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e2964fb38f96a97207a12f546e92fdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_suffix.html#a3e2964fb38f96a97207a12f546e92fdc">setSuffixText</a> (std::string text)</td></tr>
+<tr class="memitem:a3e2964fb38f96a97207a12f546e92fdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_suffix.html#a3e2964fb38f96a97207a12f546e92fdc">setSuffixText</a> (std::string <a class="el" href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">text</a>)</td></tr>
 <tr class="separator:a3e2964fb38f96a97207a12f546e92fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dee6613d812708bdaed89f5216500cf"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_suffix.html#a4dee6613d812708bdaed89f5216500cf">getIndex</a> ()</td></tr>
 <tr class="separator:a4dee6613d812708bdaed89f5216500cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,11 +92,9 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ac4fe137e581386b05722da20986252f3"><td class="memItemLeft" align="right" valign="top"><a id="ac4fe137e581386b05722da20986252f3"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
+<tr class="memitem:ac4fe137e581386b05722da20986252f3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_suffix.html#ac4fe137e581386b05722da20986252f3">index</a></td></tr>
 <tr class="separator:ac4fe137e581386b05722da20986252f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea94e5b11cda920be764b60192e4e2fe"><td class="memItemLeft" align="right" valign="top"><a id="aea94e5b11cda920be764b60192e4e2fe"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td></tr>
+<tr class="memitem:aea94e5b11cda920be764b60192e4e2fe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">text</a></td></tr>
 <tr class="separator:aea94e5b11cda920be764b60192e4e2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -137,7 +137,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td><
 <p>Static suffix comparison function. Returns: if s1 is smaller than s2 via string comparison 1; otherwise 0. </p>
 
 <p class="definition">Definition at line <a class="el" href="suffix_8cpp_source.html#l00042">42</a> of file <a class="el" href="suffix_8cpp_source.html">suffix.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> s1-&gt;text.compare(s2-&gt;text) &lt; 0 ? 1 : 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> s1-&gt;<a class="code" href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">text</a>.compare(s2-&gt;<a class="code" href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">text</a>) &lt; 0 ? 1 : 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div><div class="ttc" id="class_suffix_html_aea94e5b11cda920be764b60192e4e2fe"><div class="ttname"><a href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">Suffix::text</a></div><div class="ttdeci">std::string text</div><div class="ttdef"><b>Definition:</b> <a href="suffix_8hpp_source.html#l00018">suffix.hpp:18</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4dee6613d812708bdaed89f5216500cf"></a>
@@ -157,7 +158,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td><
 <p><a class="el" href="class_suffix.html">Suffix</a> Index Property Accessor. Returns: index from the suffix object. </p>
 
 <p class="definition">Definition at line <a class="el" href="suffix_8cpp_source.html#l00024">24</a> of file <a class="el" href="suffix_8cpp_source.html">suffix.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> this-&gt;index;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_suffix.html#ac4fe137e581386b05722da20986252f3">index</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div><div class="ttc" id="class_suffix_html_ac4fe137e581386b05722da20986252f3"><div class="ttname"><a href="class_suffix.html#ac4fe137e581386b05722da20986252f3">Suffix::index</a></div><div class="ttdeci">long index</div><div class="ttdef"><b>Definition:</b> <a href="suffix_8hpp_source.html#l00017">suffix.hpp:17</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab89ce087fb8a1bc2f2b2fde553ce64d8"></a>
@@ -177,7 +179,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td><
 <p><a class="el" href="class_suffix.html">Suffix</a> Text Property Accessor. Returns: suffixtext from the suffix object. </p>
 
 <p class="definition">Definition at line <a class="el" href="suffix_8cpp_source.html#l00033">33</a> of file <a class="el" href="suffix_8cpp_source.html">suffix.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> this-&gt;text;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> this-&gt;<a class="code" href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">text</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div><div class="ttc" id="class_suffix_html_aea94e5b11cda920be764b60192e4e2fe"><div class="ttname"><a href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">Suffix::text</a></div><div class="ttdeci">std::string text</div><div class="ttdef"><b>Definition:</b> <a href="suffix_8hpp_source.html#l00018">suffix.hpp:18</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a211c60a5b7ef4cfc8ab6f94a56a38c90"></a>
@@ -198,7 +201,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td><
 <p><a class="el" href="class_suffix.html">Suffix</a> Index Property Setter </p>
 
 <p class="definition">Definition at line <a class="el" href="suffix_8cpp_source.html#l00007">7</a> of file <a class="el" href="suffix_8cpp_source.html">suffix.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;index = ind;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;<a class="code" href="class_suffix.html#ac4fe137e581386b05722da20986252f3">index</a> = ind;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div><div class="ttc" id="class_suffix_html_ac4fe137e581386b05722da20986252f3"><div class="ttname"><a href="class_suffix.html#ac4fe137e581386b05722da20986252f3">Suffix::index</a></div><div class="ttdeci">long index</div><div class="ttdef"><b>Definition:</b> <a href="suffix_8hpp_source.html#l00017">suffix.hpp:17</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e2964fb38f96a97207a12f546e92fdc"></a>
@@ -219,7 +223,57 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>text</b></td><
 <p><a class="el" href="class_suffix.html">Suffix</a> Text Property Setter </p>
 
 <p class="definition">Definition at line <a class="el" href="suffix_8cpp_source.html#l00015">15</a> of file <a class="el" href="suffix_8cpp_source.html">suffix.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;text = suffix;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;<a class="code" href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">text</a> = suffix;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div><div class="ttc" id="class_suffix_html_aea94e5b11cda920be764b60192e4e2fe"><div class="ttname"><a href="class_suffix.html#aea94e5b11cda920be764b60192e4e2fe">Suffix::text</a></div><div class="ttdeci">std::string text</div><div class="ttdef"><b>Definition:</b> <a href="suffix_8hpp_source.html#l00018">suffix.hpp:18</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ac4fe137e581386b05722da20986252f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4fe137e581386b05722da20986252f3">&#9670;&nbsp;</a></span>index</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Suffix::index</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="suffix_8hpp_source.html#l00017">17</a> of file <a class="el" href="suffix_8hpp_source.html">suffix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aea94e5b11cda920be764b60192e4e2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea94e5b11cda920be764b60192e4e2fe">&#9670;&nbsp;</a></span>text</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Suffix::text</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="suffix_8hpp_source.html#l00018">18</a> of file <a class="el" href="suffix_8hpp_source.html">suffix.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

@@ -23,6 +23,11 @@
  */
 std::vector<Suffix*> SuffixArray::build(std::string text)
 {
+    // forcing terminal placement incase it hasnt happened yet.
+    if (text.find("$") == std::string::npos) {
+        text = text + "$";
+    }
+    
     this->text = text;
     this->textlength = text.length();
     
@@ -114,4 +119,41 @@ void SuffixArray::buildSection(long &start, long &end, std::vector<Suffix *> &re
 std::vector<Suffix *> SuffixArray::getLast()
 {
     return last;
+}
+
+/**
+ This function leverages the natural state of the suffix array to find all
+ substring positions.
+
+ @param text The query string.
+ @return Returns a vector if integers containing the start positions of all
+ substrings detected.
+ */
+std::vector<Suffix*> SuffixArray::getAllSubstringPositions(std::string text)
+{
+    long l = 0;
+    long r = this->last.size();
+    
+    // use a binary search to discover our starting position to scan from.
+    while (l < r) {
+        long mid = (l + r) / 2;
+        if (text.compare(this->last[mid]->getSuffixText()) > 0) {
+            l = mid + 1;
+        } else {
+            r = mid;
+        }
+    }
+    
+    // scan forward and add records until we don't find our substring anymore.
+    long startInterval = l;
+    std::vector<Suffix*> result;
+    for (long i = startInterval; i < this->last.size(); i++) {
+        if (this->last[i]->getSuffixText().find(text) == 0) {
+            result.push_back(this->last[i]);
+        } else {
+            break;
+        }
+    }
+    
+    return result;
 }

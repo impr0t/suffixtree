@@ -15,9 +15,14 @@
 		A2656240207D08CD005FC8EB /* suffixarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631A20733E86005676C6 /* suffixarray.cpp */; };
 		A2656241207D08CD005FC8EB /* suffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631C20733E86005676C6 /* suffixtree.cpp */; };
 		A2656242207D08CD005FC8EB /* textstat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A265621F207BE01D005FC8EB /* textstat.cpp */; };
-		A2656243207D08CD005FC8EB /* testsuffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2D692A1207871BA00F2A171 /* testsuffixtree.cpp */; };
 		A2656244207D08CD005FC8EB /* testtextstat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2656222207BE06F005FC8EB /* testtextstat.cpp */; };
 		A2656245207D08CD005FC8EB /* runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2D692AA2078803A00F2A171 /* runner.cpp */; };
+		A2656247207DC0CA005FC8EB /* testsuffixarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2656246207DC0CA005FC8EB /* testsuffixarray.cpp */; };
+		A2656249207DC439005FC8EB /* textlcparray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2656248207DC439005FC8EB /* textlcparray.cpp */; };
+		A265624B207DC8AB005FC8EB /* testprefix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A265624A207DC8AB005FC8EB /* testprefix.cpp */; };
+		A265624D207DCCFD005FC8EB /* testsuffix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A265624C207DCCFD005FC8EB /* testsuffix.cpp */; };
+		A265624F207DCE32005FC8EB /* testsuffixtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A265624E207DCE32005FC8EB /* testsuffixtree.cpp */; };
+		A2656251207DDAF3005FC8EB /* testsuffixtreenode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2656250207DDAF3005FC8EB /* testsuffixtreenode.cpp */; };
 		A2AA631F20733E86005676C6 /* suffix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631520733E85005676C6 /* suffix.cpp */; };
 		A2AA632120733E86005676C6 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631920733E86005676C6 /* application.cpp */; };
 		A2AA632220733E86005676C6 /* suffixarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2AA631A20733E86005676C6 /* suffixarray.cpp */; };
@@ -52,6 +57,12 @@
 		A265621F207BE01D005FC8EB /* textstat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = textstat.cpp; sourceTree = "<group>"; };
 		A2656220207BE01D005FC8EB /* textstat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = textstat.hpp; sourceTree = "<group>"; };
 		A2656222207BE06F005FC8EB /* testtextstat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testtextstat.cpp; sourceTree = "<group>"; };
+		A2656246207DC0CA005FC8EB /* testsuffixarray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testsuffixarray.cpp; sourceTree = "<group>"; };
+		A2656248207DC439005FC8EB /* textlcparray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = textlcparray.cpp; sourceTree = "<group>"; };
+		A265624A207DC8AB005FC8EB /* testprefix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testprefix.cpp; sourceTree = "<group>"; };
+		A265624C207DCCFD005FC8EB /* testsuffix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testsuffix.cpp; sourceTree = "<group>"; };
+		A265624E207DCE32005FC8EB /* testsuffixtree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testsuffixtree.cpp; sourceTree = "<group>"; };
+		A2656250207DDAF3005FC8EB /* testsuffixtreenode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testsuffixtreenode.cpp; sourceTree = "<group>"; };
 		A2AA630A20733DEA005676C6 /* suffixtree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = suffixtree; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AA631420733E85005676C6 /* suffix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = suffix.hpp; sourceTree = "<group>"; };
 		A2AA631520733E85005676C6 /* suffix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = suffix.cpp; sourceTree = "<group>"; };
@@ -68,7 +79,6 @@
 		A2AA63292074532F005676C6 /* prefix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prefix.cpp; sourceTree = "<group>"; };
 		A2AA632A2074532F005676C6 /* prefix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prefix.hpp; sourceTree = "<group>"; };
 		A2D69298207870C000F2A171 /* testsuffixtree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testsuffixtree; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2D692A1207871BA00F2A171 /* testsuffixtree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testsuffixtree.cpp; sourceTree = "<group>"; };
 		A2D692A920787FD100F2A171 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		A2D692AA2078803A00F2A171 /* runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = runner.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,9 +105,14 @@
 			isa = PBXGroup;
 			children = (
 				A2D692A920787FD100F2A171 /* include */,
-				A2D692A1207871BA00F2A171 /* testsuffixtree.cpp */,
-				A2656222207BE06F005FC8EB /* testtextstat.cpp */,
 				A2D692AA2078803A00F2A171 /* runner.cpp */,
+				A2656246207DC0CA005FC8EB /* testsuffixarray.cpp */,
+				A2656222207BE06F005FC8EB /* testtextstat.cpp */,
+				A2656248207DC439005FC8EB /* textlcparray.cpp */,
+				A265624A207DC8AB005FC8EB /* testprefix.cpp */,
+				A265624C207DCCFD005FC8EB /* testsuffix.cpp */,
+				A265624E207DCE32005FC8EB /* testsuffixtree.cpp */,
+				A2656250207DDAF3005FC8EB /* testsuffixtreenode.cpp */,
 			);
 			path = testsuffixtree;
 			sourceTree = "<group>";
@@ -235,14 +250,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A265624F207DCE32005FC8EB /* testsuffixtree.cpp in Sources */,
 				A265623C207D08CD005FC8EB /* helpers.cpp in Sources */,
+				A265624B207DC8AB005FC8EB /* testprefix.cpp in Sources */,
+				A2656247207DC0CA005FC8EB /* testsuffixarray.cpp in Sources */,
 				A265623D207D08CD005FC8EB /* lcparray.cpp in Sources */,
 				A265623E207D08CD005FC8EB /* prefix.cpp in Sources */,
+				A2656249207DC439005FC8EB /* textlcparray.cpp in Sources */,
 				A265623F207D08CD005FC8EB /* suffix.cpp in Sources */,
 				A2656240207D08CD005FC8EB /* suffixarray.cpp in Sources */,
 				A2656241207D08CD005FC8EB /* suffixtree.cpp in Sources */,
+				A2656251207DDAF3005FC8EB /* testsuffixtreenode.cpp in Sources */,
 				A2656242207D08CD005FC8EB /* textstat.cpp in Sources */,
-				A2656243207D08CD005FC8EB /* testsuffixtree.cpp in Sources */,
+				A265624D207DCCFD005FC8EB /* testsuffix.cpp in Sources */,
 				A2656244207D08CD005FC8EB /* testtextstat.cpp in Sources */,
 				A2656245207D08CD005FC8EB /* runner.cpp in Sources */,
 			);

@@ -61,7 +61,7 @@ LOOKUP_CACHE_SIZE      = 0
 #---------------------------------------------------------------------------
 # Build related configuration options
 #---------------------------------------------------------------------------
-EXTRACT_ALL            = NO
+EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_PACKAGE        = NO
 EXTRACT_STATIC         = YES
@@ -159,9 +159,9 @@ FILE_PATTERNS          = *.c \
                          *.ucf \
                          *.qsf
 RECURSIVE              = YES
-EXCLUDE                = */testsuffixtree/include
+EXCLUDE                = */include/*
 EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       = */testsuffixtree/include
+EXCLUDE_PATTERNS       = */include/*
 EXCLUDE_SYMBOLS        =
 EXAMPLE_PATH           = 
 EXAMPLE_PATTERNS       = *
