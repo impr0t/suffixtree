@@ -106,13 +106,13 @@
 			children = (
 				A2D692A920787FD100F2A171 /* include */,
 				A2D692AA2078803A00F2A171 /* runner.cpp */,
-				A2656246207DC0CA005FC8EB /* testsuffixarray.cpp */,
-				A2656222207BE06F005FC8EB /* testtextstat.cpp */,
-				A2656248207DC439005FC8EB /* textlcparray.cpp */,
 				A265624A207DC8AB005FC8EB /* testprefix.cpp */,
 				A265624C207DCCFD005FC8EB /* testsuffix.cpp */,
+				A2656246207DC0CA005FC8EB /* testsuffixarray.cpp */,
 				A265624E207DCE32005FC8EB /* testsuffixtree.cpp */,
 				A2656250207DDAF3005FC8EB /* testsuffixtreenode.cpp */,
+				A2656222207BE06F005FC8EB /* testtextstat.cpp */,
+				A2656248207DC439005FC8EB /* textlcparray.cpp */,
 			);
 			path = testsuffixtree;
 			sourceTree = "<group>";
